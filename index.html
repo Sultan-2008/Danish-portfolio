@@ -9,8 +9,8 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color:purple;
-            color: black;
+            background-color: pink;
+            color: brown;
         }
 
         header {
@@ -19,23 +19,28 @@
             text-align: center;
             padding: 1em;
         }
-        header:hover{
-            background-color: #fff;
-            
-        }
-        h1:hover{
-            color: black;
-            font-size: 40px;
+        
+        header:hover {
+            background-color: green;
+            transition: 3s;
+            border: 6px solid darkred;
+            border-radius: 6rem;
+            color: lime;
         }
 
-        header img {
+        #box {
+            width: 100%;
+            max-width: 220px;
+            height: 220px;
+            border: 2px solid ;
             border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            margin-bottom: 10px;
+            background-image: url("image.jpg");
+            background-size: cover;
+            margin: 0 auto; /* Center the box */
         }
-        header img:hover{
-            transform: scale(2);
+
+        #box:hover {
+            text-align: center;
         }
 
         section {
@@ -43,19 +48,21 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.9s ease-in-out;
             background-color: #fff;
         }
 
         section:hover {
             transform: scale(1.05);
             text-align: center;
+            color: #fff;
         }
 
         h1, h2 {
             color: #007BFF;
             text-align: center;
         }
+
         h2:hover {
             color: black;
             font-size: 30px;
@@ -90,22 +97,56 @@
 
         /* Responsive Design */
         @media (max-width: 600px) {
-            header img {
+            #box {
                 width: 80px;
                 height: 80px;
             }
+
+            section {
+                padding: 10px;
+            }
         }
+
+        @keyframes typing{
+            0%{
+                width: 0%;
+            }
+            50%{
+                width: 100%;
+            }
+        }
+        /* body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        } */
+        .typing{
+            color: darkturquoise;
+            border-right: 0.1rem solid aqua;
+            font-size: 2em;
+            width: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing steps(20,end) forwards infinite 8s;
+        }
+
     </style>
 </head>
 <body>
 
     <header>
-        <img src="image.jpg" alt="Your Profile Picture">
-        <h1>Danish Mukhtar</h1>
+        <div id="box"></div>
+        <div class="text-container">
+            <div class="typing">
+                Danish Mukhtar.
+            </div>
+        </div>
         <p>Software Developer | Computer Science Engineering</p>
     </header>
 
-    <section style="background-color: #E74C3C;">
+    <section style="background-color: #352f44;">
         <h2>About Me</h2>
         <p>
             I am a passionate computer science student with a keen interest in web development.
@@ -114,7 +155,7 @@
         </p>
     </section>
 
-    <section style="background-color: #3498DB;">
+    <section style="background-color: #5c5470;">
         <h2>Skills</h2>
         <ul>
             <li>HTML5</li>
@@ -126,7 +167,7 @@
         </ul>
     </section>
 
-    <section style="background-color: #2ECC71;">
+    <section style="background-color: #b9b4c7;">
         <h2>Projects</h2>
         <p>
             <strong>Guess Game:</strong> Create a Game using Java.
@@ -140,7 +181,7 @@
         </p>
     </section>
 
-    <section style="background-color: #F39C12;">
+    <section style="background-color: #faf0e6;">
         <h2>Contact</h2>
         <p>
             Feel free to connect with me via email at: <a href="mailto:smartwork4492@gmail.com">smartwork4492@gmail.com</a>
@@ -155,8 +196,4 @@
     </section>
 
     <footer>
-        &copy; 2024 Danish Mukhtar
-    </footer>
-
-</body>
-</html>
+        &copy; 2024  Danish Mukhtar 
